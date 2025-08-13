@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Invoice</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0 auto;
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        display: flex;
+        flex-direction: column;
+      }
+
+      header {
+        padding: 30px;
+        text-align: center;
+        background-color: #2c3e50;
+        color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      form {
+        background-color: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      legend {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      input {
+        padding: 15px;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+      }
+
+      button {
+        padding: 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      button:active {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 600px) {
+        form {
+          padding: 30px 20px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        legend {
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>IVAC Payment Invoice Download</h1>
+    </header>
+    <main>
+      <form action="">
+        <legend>Enter Invoice Number</legend>
+        <input
+          type="text"
+          name="invoice"
+          id="invoice-number"
+          placeholder="Enter Invoice Number"
+        />
+        <button type="submit">Download</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
