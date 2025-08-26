@@ -2,15 +2,13 @@ document.querySelector("form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const invoiceNumber = document.getElementById("invoice-number").value.trim();
-  const apiUrl = "https://api-payment.ivacbd.com/invoice/print_multi/";
+  const apiUrl = "https://payment.ivacbd.com/payment-response/";
 
   if (invoiceNumber) {
     const fullUrl = apiUrl + invoiceNumber;
 
     window.open(fullUrl, "_blank");
-  } 
-  
-  else {
+  } else {
     alert("Please enter a valid invoice number");
   }
 });
